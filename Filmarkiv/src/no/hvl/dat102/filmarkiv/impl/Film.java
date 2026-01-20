@@ -7,14 +7,14 @@ public class Film {
     private String produsent;
     private String tittel;
     private int utAr;
-    private Enum sjanger;
+    private Sjanger sjanger;
     private String utgiver;
 
     public Film(){ //Standarkonstruktør
     }
 
     //Konstruktør
-    public Film(int filmnr, String produsent, String tittel, int utAr, Enum sjanger, String utgiver){
+    public Film(int filmnr, String produsent, String tittel, int utAr, Sjanger sjanger, String utgiver){
         this.filmnr = filmnr;
         this.produsent = produsent;
         this.tittel = tittel;
@@ -24,44 +24,21 @@ public class Film {
     }
 
     //Get-metoder
-    public int getFilmnr(){
-        return filmnr;
-    }
-    public String getProdusent(){
-        return produsent;
-    }
-    public String getTittel(){
-        return tittel;
-    }
-    public int getUtAr(){
-        return utAr;
-    }
-    public Enum getSjanger(){
-        return sjanger;
-    }
-    public String getUtgiver(){
-        return utgiver;
-    }
+    public int getFilmnr() {return filmnr;}
+    public String getProdusent() {return produsent;}
+    public String getTittel() {return tittel;}
+    public int getUtAr() {return utAr;}
+    public Enum getSjanger() {return sjanger;}
+    public String getUtgiver() {return utgiver;}
 
     //Set-metoder
-    public void setFilmnr(int ny){
-        filmnr = ny;
-    }
-    public void setProdusent(String ny){
-        produsent = ny;
-    }
-    public void setTittel(String ny){
-        tittel = ny;
-    }
-    public void setUtAr(int ny){
-        utAr = ny;
-    }
-    public void setSjanger(Enum ny){
-        sjanger = ny;
-    }
-    public void setUtgiver(String ny){
-        utgiver = ny;
-    }
+    public void setFilmnr(int ny) {filmnr = ny;}
+    public void setProdusent(String ny) {produsent = ny;}
+    public void setTittel(String ny) {tittel = ny;}
+    public void setUtAr(int ny) {utAr = ny;}
+    public void setSjanger(Sjanger ny) {sjanger = ny;}
+    public void setUtgiver(String ny) {utgiver = ny;}
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
