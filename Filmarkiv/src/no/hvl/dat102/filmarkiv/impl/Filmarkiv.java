@@ -58,21 +58,35 @@ public class Filmarkiv implements FilmarkivADT {
                 funnet++;
             }
         }
-        return resultat;
+        return Arrays.copyOf(resultat, funnet);
     }
 
     @Override
     public Film[] soekProdusent(String delstreng) {
-        return new Film[0];
-    }
+        Film[] resultat = new Film[antall];
+        int funnet = 0;
 
+        for (int i = 0; i < antall; i++) {
+            if (filmarkiv[i].getProdusent().contains(delstreng)) {
+                resultat[funnet] = filmarkiv[i];
+                funnet++;
+            }
+        }
+        return Arrays.copyOf(resultat, funnet);
+    }
     @Override
     public int antall(Sjanger sjanger) {
-        return 0;
+        int mengde = 0;
+        for (int i = 0; i < antall; i++) {
+            if (filmarkiv[i].getSjanger() == sjanger){
+                mengde++;
+            }
+        }
+        return mengde;
     }
 
     @Override
     public int antall() {
-        return 0;
+        return antall;
     }
 }
