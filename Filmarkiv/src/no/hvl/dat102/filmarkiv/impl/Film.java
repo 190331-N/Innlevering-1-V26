@@ -55,6 +55,4 @@ public class Film {
     public int hashCode() {
         return Integer.hashCode(filmnr);
     }
-
-
 }
