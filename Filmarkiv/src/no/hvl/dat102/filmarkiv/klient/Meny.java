@@ -19,12 +19,10 @@
         public void start() {
             leggInnTestdata();
 
-            Scanner in = new Scanner(System.in);
-
             boolean fortsett = true;
             while (fortsett) {
                 skrivMeny();
-                int valg = in.nextInt();
+                int valg = tekst.lesInt("Velg: ");
 
                 switch (valg) {
                     case 1:
