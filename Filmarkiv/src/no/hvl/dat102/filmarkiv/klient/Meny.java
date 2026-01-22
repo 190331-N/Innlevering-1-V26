@@ -19,10 +19,12 @@
         public void start() {
             leggInnTestdata();
 
+            Scanner in = new Scanner(System.in);
+
             boolean fortsett = true;
             while (fortsett) {
                 skrivMeny();
-                int valg = tekst.lesInt("Velg: ");
+                int valg = in.nextInt();
 
                 switch (valg) {
                     case 1:
@@ -54,17 +56,19 @@
             System.out.println();
             System.out.println("=== FILMARKIV ===");
             System.out.println("1: Legg til film");
-            System.out.println("2: Skriv ut alle filmer");
+            System.out.println("2: Skriv ut film");
             System.out.println("3: Søk på tittel");
-            System.out.println("4: Slett film");
+            System.out.println("4: Søk på produsent");
+            System.out.println("5: Statistikk");
             System.out.println("0: Avslutt");
         }
 
         private void leggInnTestdata() {
-            arkiv.leggTilFilm(new Film(1, "Nolan", "Inception", 2010, Sjanger.SCIFI));
-            arkiv.leggTilFilm(new Film(2, "Wachowski", "The Matrix", 1999, Sjanger.SCIFI));
-            arkiv.leggTilFilm(new Film(3, "Fincher", "Fight Club", 1999, Sjanger.DRAMA));
+            arkiv.leggTilFilm(new Film(1, "Peter Jackson", "Ringenes herre", 2001, Sjanger.FANTASY, "New Line"));
+            arkiv.leggTilFilm(new Film(2, "James Cameron", "Titanic", 1997, Sjanger.DRAMA, "Fox"));
+            arkiv.leggTilFilm(new Film(3, "Gore Verbinski", "Pirates", 2003, Sjanger.EVENTYR, "Disney"));
         }
     }
+
 
 
