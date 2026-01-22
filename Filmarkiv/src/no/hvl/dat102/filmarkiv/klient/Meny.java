@@ -15,9 +15,38 @@ public class Meny {
         this.filmarkiv = filmarkiv;
     }
     public void start(){
-        Film f1 = new Film(1, "Peter Jackson", "Ringenes herre", 2001, Sjanger.FANTASY, "New Line");
-        Film f2 = new Film(2, "James Cameron", "Titanic", 1997, Sjanger.DRAMA, "Fox");
-        Film f3 = new Film(3, "Gore Verbinski", "Pirates", 2003, Sjanger.EVENTYR, "Disney");
+        leggInnTestdata();
+
+        boolean fortsett = true;
+        while (fortsett) {
+            skrivMeny();
+            int valg = tekstgr.lesInt("Velg: ");
+
+            switch (valg) {
+                case 1:
+                    lesFilm();
+                    break;
+                case 2:
+                    skrivUtFilmDelstrengITittel();
+                    break;
+                case 3:
+                    skrivUtFilmProdusent();
+                    break;
+                case 4:
+                    skrivUtStatistikk;
+                    break;
+                default:
+                    System.out.println("Ugyldig valg. Prøv igjen");
+                    break;
+            }
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+
+            int valg = tekstgr.lesInt("velg: ");
+        }
 
 
 
