@@ -28,18 +28,22 @@
 
                 switch (valg) {
                     case 1:
-                        Film film = tekst.lesFilm();
-                        arkiv.leggTilFilm(film);
+                        Film nyFilm = tekst.lesFilm();
+                        arkiv.leggTilFilm(nyFilm);
                         break;
 
-                    case 3:
+                    case 2:
                         String delstreng = tekst.lesString("Delstreng i tittel: ");
                         Film[] treff = arkiv.finnFilmDelstrengITittel(delstreng);
                         tekst.skrivUtFilmer(treff);
                         break;
 
-                    case 4:
+                    case 3:
                         arkiv.slettFilm(tekst.lesInt("Filmnr som skal slettes: "));
+                        break;
+
+                    case 4:
+
                         break;
 
                     case 0:
@@ -56,10 +60,9 @@
             System.out.println();
             System.out.println("=== FILMARKIV ===");
             System.out.println("1: Legg til film");
-            System.out.println("2: Skriv ut film");
-            System.out.println("3: Søk på tittel");
-            System.out.println("4: Søk på produsent");
-            System.out.println("5: Statistikk");
+            System.out.println("2: Søk på tittel");
+            System.out.println("3: Søk på produsent");
+            System.out.println("4: Statistikk");
             System.out.println("0: Avslutt");
         }
 

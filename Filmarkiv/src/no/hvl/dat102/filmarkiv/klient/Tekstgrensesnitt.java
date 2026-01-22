@@ -32,15 +32,6 @@ public class Tekstgrensesnitt {
         return new Film(filmnr, produsent, tittel, utAr, sjanger, utgiver);
     }
 
-    public void skrivUtFilm(Film film) {
-        System.out.println("FilmNr:        " + film.getFilmnr());
-        System.out.println("Produsent:     " + film.getProdusent());
-        System.out.println("Tittel:        " + film.getTittel());
-        System.out.println("Lanserings år: " + film.getUtAr());
-        System.out.println("Sjanger:       " + film.getSjanger());
-        System.out.println("Utgiver:       " + film.getUtgiver());
-    }
-
     // Skriver ut alle filmer med en spesiell delstreng i tittelen
     public void skrivUtFilmDelstrengITittel(FilmarkivADT arkiv, String delstreng) {
         Film[] treff = arkiv.soekTittel(delstreng);
