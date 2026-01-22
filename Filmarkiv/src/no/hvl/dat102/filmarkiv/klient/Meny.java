@@ -39,14 +39,77 @@ public class Meny {
                     System.out.println("Ugyldig valg. Prøv igjen");
                     break;
             }
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
 
-            int valg = tekstgr.lesInt("velg: ");
-        }
+            private void skrivMeny() {
+                System.out.println();
+                System.out.println("====== FILMARKIV MENY ======");
+                System.out.println("1) Legg til film");
+                System.out.println("2) Skriv ut alle filmer");
+                System.out.println("3) Søk i tittel (delstreng)");
+                System.out.println("4) Søk på produsent");
+                System.out.println("5) Slett film (filmnr)");
+                System.out.println("0) Avslutt");
+                System.out.println("============================");
+            }
+
+            private void leggTilFilm() {
+                System.out.println("\n--- Legg til film ---");
+                Film film = tekstgr.lesFilm();
+                filmarkiv.leggTilFilm(film);
+                System.out.println("Film lagt til.");
+            }
+
+            private void skrivUtAlleFilmer() {
+                System.out.println("\n--- Alle filmer ---");
+                Film[] alle = filmarkiv.hentAlleFilmer();
+                if (alle == null || alle.length == 0) {
+                    System.out.println("Ingen filmer registrert.");
+                    return;
+                }
+                for (Film f : alle) {
+                    if (f != null) {
+                        tekstgr.skrivUtFilm(f);
+                        System.out.println();
+                    }
+                }
+            }
+
+            private void sokPaTittelDelstreng() {
+                System.out.println("\n--- Søk i tittel (delstreng) ---");
+                String delstreng = tekstgr.lesString("Skriv delstreng: ");
+                Film[] treff = filmarkiv.finnFilmDelstrengITittel(delstreng);
+
+                if (treff == null || treff.length == 0) {
+                    System.out.println("Ingen treff.");
+                    return;
+                }
+                System.out.println("Treff:");
+                for (Film f : treff) {
+                    if (f != null) {
+                        tekstgr.skrivUtFilm(f);
+                        System.out.println();
+                    }
+                }
+            }
+
+            private void sokPaProdusent() {
+                System.out.println("\n--- Søk på produsent ---");
+                String produsent = tekstgr.lesString("Skriv produsent: ");
+                Film[] treff = filmarkiv.finnFilmerProdusent(produsent);
+
+                if (treff == null || treff.length == 0) {
+                    System.out.println("Ingen treff.");
+                    return;
+                }
+                System.out.println("Treff:");
+                for (Film f : treff) {
+                    if (f != null) {
+                        tekstgr.skrivUtFilm(f);
+                        System.out.println()
+
+
+
+
 
 
 
