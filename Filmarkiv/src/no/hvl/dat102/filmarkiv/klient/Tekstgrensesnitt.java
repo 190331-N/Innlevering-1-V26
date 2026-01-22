@@ -12,6 +12,7 @@ public class Tekstgrensesnitt {
     public Film lesFilm() {
         System.out.println("Filmnr: ");
         int filmnr = in.nextInt();
+        in.nextLine();
 
         System.out.println("Produsent: ");
         String produsent = in.nextLine();
