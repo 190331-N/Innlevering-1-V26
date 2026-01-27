@@ -25,6 +25,7 @@
             while (fortsett) {
                 skrivMeny();
                 int valg = in.nextInt();
+                in.nextLine();
 
                 switch (valg) {
                     case 1:
