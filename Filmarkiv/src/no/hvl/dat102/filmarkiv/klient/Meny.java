@@ -71,7 +71,7 @@
         }
 
         private void leggInnTestdata() {
-            arkiv.leggTilFilm(new Film(1, "Peter Jackson", "Ringenes herre", 2001, Sjanger.FANTASY, "New Line"));
+            arkiv.leggTilFilm(new Film(1, "Peter Jackson", "Ringenes herre", 2001, Sjanger.FANTASY, "New Line Cinema"));
             arkiv.leggTilFilm(new Film(2, "James Cameron", "Titanic", 1997, Sjanger.DRAMA, "Fox"));
             arkiv.leggTilFilm(new Film(3, "Gore Verbinski", "Pirates", 2003, Sjanger.EVENTYR, "Disney"));
         }

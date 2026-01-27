@@ -52,7 +52,7 @@ public class Tekstgrensesnitt {
         Film[] treff = arkiv.soekTittel(delstreng);
 
         for (Film film : treff) {
-            System.out.println(film);
+            System.out.println(film.toString());
         }
     }
 
@@ -61,7 +61,7 @@ public class Tekstgrensesnitt {
         Film[] treff = arkiv.soekProdusent(delstreng);
 
         for (Film film : treff) {
-            System.out.println(film);
+            System.out.println(film.toString());
         }
     }
 
